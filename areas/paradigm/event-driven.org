@@ -1,0 +1,8 @@
+#+title: Event Driven
+* Event Loop
+** ¿Que es?
+Un *bucle de eventos* mecanismo fundamental en la programación orientada a eventos y la programación asincronica, *permite* a una aplicación gestionar y responder a multiples eventos o tareas de manera eficiente, *sin bloquear la ejecución del programa*
+** Funcionamiento basico
+- El *bucle de eventos* es como un vigilante que permanece en ejecución, esperando la llegada de nuevos eventos o tareas
+** Anexos
+[[https://docs.python.org/es/3.13/library/asyncio-eventloop.html][bucle-de-eventos-asyncio-python]]
