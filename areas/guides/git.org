@@ -1,0 +1,2 @@
+#+title: Git
+* ¿ Como hacer un merge en git ?

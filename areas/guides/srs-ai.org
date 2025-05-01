@@ -1,0 +1,8 @@
+#+title: Srs Ai
+* Flujo de creación de aplicaciones con Cursor
+** Definir las cursor rules
+** Crear un PRD mediante IA
+Algunas partes que deberia tener el prompt para generar este PRD
+- Descripcion del proyecto
+- Funcionalidades
+-

@@ -1,0 +1,15 @@
+#+title: Monolitic App
+* ¿Como crear una aplicacion Monolitica con python?
+** Objetivo de la aplicación
+Generalmente tomo notas en un archivo de *org* en *Emacs* pero al pasar el tiempo los archivos se van volviendo grandes y al momento de querer repasar no puedo hacerlo ya que son grandes volumenes de información
+
+Con este agente quiero que analice la informacion de los diferentes archivos org, y luego genere preguntas sobre los temas que encuentre y sus respectivas respuestas, luego de eso me haga las preguntas a mi y si las respondo bien o similar rastree esa informacion en una base de datos y programe segun la tecnica de *repeticion espaciada* una cita para responder a las preguntas.
+
+Segun yo conteste las preguntas se almacenaran y se clasificaran como si hubiesen sido pasadas o se deberian repetir
+** Arquitectura utilizada
+Arquitectura monolitica
+** Tecnologias utilizadas
+- uv *(gestion de dependencias)*
+- python
+- langchain/langgraph
+- streamlit *(frontend-web)*
