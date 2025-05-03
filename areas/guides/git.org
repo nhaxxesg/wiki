@@ -1,2 +1,16 @@
 #+title: Git
 * ¿ Como hacer un merge en git ?
+* ¿ Como solucionar un problema de /ramas divergentes/ entre un /repositorio local/ y /uno remoto/?
+** Causas generales
+- *commits locales* que no estan en el repositorio
+- alquien mas hizo *commits* nuevos en la rama *main* de repositorio remoto
+** Merge (Configuracion)
+#+begin_src git
+git config pull.rebase false
+#+end_src
+- crea un nuevo *commit* de fusion combinando ambos historiales
+** Merge (Resolverlo en el momento)
+#+begin_src git
+git pull --no-rebase origin main
+#+end_src
+-

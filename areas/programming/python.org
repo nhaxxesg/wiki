@@ -1,0 +1,44 @@
+#+title: Python
+* Caracteristicas interesantes
+- Cada pieza de datos en un programa *python* es un *objeto* de un tipo especifico o *clase*
+-[[https://files.realpython.com/media/t.2d7bcb9afaaf.png]]
+- *type hints*
+  #+begin_src python :results output
+var_1: int = "5"
+
+print(var_1)
+  #+end_src
+
+  #+RESULTS:
+  : 5
+
+- *parallel assignment*
+  #+begin_src python :results output
+is_authenticated = is_active = is_admin = True
+
+print(is_authenticated)
+print(is_active)
+print(is_admin)
+
+  #+end_src
+
+  #+RESULTS:
+  : True
+  : True
+  : True
+
+- *iterable unpacking*
+  #+begin_src python :results output
+names = ["josue", "angel", "ferro"]
+name1, name2 , lastname = names
+print(name1)
+print(name2)
+print(lastname)
+  #+end_src
+
+  #+RESULTS:
+  : josue
+  : angel
+  : ferro
+
+-
