@@ -1,2 +1,10 @@
 #+title: Redis
-*
+* ¿ Como conectarse al CLI de redis mediante docker ?
+1. Ejecutar docker con la imagen de redis
+   #+begin_src bash
+docker run -d --name  redis -p 6379:6379 redis
+   #+end_src
+2. Conectarse al cli de redis
+   #+begin_src bash
+docker exec -it redis redis-cli
+   #+end_src

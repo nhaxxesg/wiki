@@ -1,0 +1,5 @@
+#+title: Fastapi
+* Response parameter
+** Cookies
+**** ¿Que son las cookies?
+Son fragmentos de informacion que almacenan datos de navegacion con diversos propositos
