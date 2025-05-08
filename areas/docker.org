@@ -1,0 +1,20 @@
+#+title: Docker
+* ¿ Como ejecutar un contenedor ya creado ?
+#+begin_src bash
+docker start <nombre o ID>
+#+end_src
+* Comandos utiles
+** ¿ como ver los contenedores existentes ?
+#+begin_src bash
+docker ps -a
+#+end_src
+* Tareas
+** exponer endpoint para ver los
+                payment_intent["metadata"] = {
+                    "invoice_type": "1",
+                    "order_number": "37",
+                    "user_email": "josueangelferroquispe@gmail.com",
+                    "user_fullname": "Josue Angel Ferroquispe",
+                    "user_address": "Av. 28 de Julio 123",
+                    "document_number": "10722809357",
+                }

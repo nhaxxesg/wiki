@@ -13,4 +13,12 @@ git config pull.rebase false
 #+begin_src git
 git pull --no-rebase origin main
 #+end_src
--
+* ¿ Como dejar de /trackear/ un archivo el cual ya esta incluido en un /commit/?
+** ¿ Para que sirve git rm ?
+La primera funcion de *git rm* es para remover archivos *rastreados* del *Git index*
+** Asegurate que tu /.gitignore/ contenga el archivo
+
+** Elimina de manera "desindexada"
+#+begin_src bash
+git rm -r --cached .
+#+end_src

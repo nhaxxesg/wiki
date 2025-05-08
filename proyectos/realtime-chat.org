@@ -1,1 +1,5 @@
 #+title: Realtime Chat
+* Uso de /JWT/ para la authenticación y redis para la gestion de /sesiones/
+** Uso de /JWT/ para la autenticacion del usuario
+** Uso de /redis/ para la gestion de sesiones
+** Que es un ataque CSRF

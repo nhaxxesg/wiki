@@ -1,0 +1,11 @@
+#+title: Repository Pattern
+* Caracteristicas
+* Notas
+- No es necesaria la validación de datos retornados por la base de datos
+  - *ejemplo*: cuando estoy trabajando con *fastapi* en el *repository* la validación con *pydantic* en general no es el lugar adecuado para hacer la validación de los datos.
+- El Repository puede usar Pydantic para transformaciones menores o validaciones de formato básicas si es necesario para interactuar con la base de datos, pero no es su *responsabilidad principal*.
+* ¿ Por que no usar /Pydantic/ en el /Repository/?
+** Responsabilidad Unica
+El Repository debe enfocarse en el acceso a datos. La validación de datos es más apropiada en la capa de Service
+** Acoplamiento
+Si usas Pydantic para validar todo en el Repository, lo acoplas a la estructura de tus modelos Pydantic, lo cual puede dificultar cambios futuros en la base de datos o en los modelos
