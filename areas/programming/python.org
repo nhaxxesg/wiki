@@ -1,7 +1,7 @@
 #+title: Python
 * Caracteristicas interesantes
 - Cada pieza de datos en un programa *python* es un *objeto* de un tipo especifico o *clase*
--[[https://files.realpython.com/media/t.2d7bcb9afaaf.png]]
+- [[https://files.realpython.com/media/t.2d7bcb9afaaf.png]]
 - *type hints*
   #+begin_src python :results output
 var_1: int = "5"
@@ -41,4 +41,9 @@ print(lastname)
   : angel
   : ferro
 
--
+** Que es la codificación /utf-8/
+La codificación UTF-8 (Unicode Transformation Format - 8 bits) es un estándar de codificación de caracteres que permite representar prácticamente todos los caracteres de los sistemas de escritura del mundo, incluyendo letras, símbolos, emojis y caracteres especiales
+* Buffers
+* Corrutinas
+** Definición
+Una corrutina en *asyncio* Python es una *funcion especial que puede pausar y reanudar su ejecución*, permitiendo que otras tareas se ejecuten durante esas pausas
