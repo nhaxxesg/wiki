@@ -1,4 +1,15 @@
 #+title: Git
+* Estados de Git
+** Confirmado (committed)
+Significa que los datos almacenados de manera segura en la base de datos local. Los archivos en la base de datos local. Los archivos en este estafo forman parte del historial del proyecto
+** Modificado (Modified)
+Significa que el archivo ha sido modificado pero aún no se ha confirmado en la base de datos, estos cambios solo existen en el sistema de archivos local
+** Preparado (Staged)
+Significa que un archivo ya modificado se marco en su version actual para ser incluido en la proxima confirmación (commit)
+* Secciones principales de Git
+** El directorio de git
+** El directorio de trabajo
+** El area de preparación
 * ¿ Como hacer un merge en git ?
 * ¿ Como solucionar un problema de /ramas divergentes/ entre un /repositorio local/ y /uno remoto/?
 ** Causas generales
@@ -21,4 +32,16 @@ La primera funcion de *git rm* es para remover archivos *rastreados* del *Git in
 ** Elimina de manera "desindexada"
 #+begin_src bash
 git rm -r --cached .
+#+end_src
+
+* Modificar el ultimo /commit/
+Para modificar el ultimo *commit* se puede usar el parametro ~--amend~
+** Corregir el ultimo mensaje
+#+begin_src bash
+git commit --amend
+#+end_src
+** Agregar archivos olvidados al ultimo commit
+#+begin_src bash
+git add <archivo olvidado>
+git commit --amend
 #+end_src
