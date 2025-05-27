@@ -47,3 +47,42 @@ La codificación UTF-8 (Unicode Transformation Format - 8 bits) es un estándar 
 * Corrutinas
 ** Definición
 Una corrutina en *asyncio* Python es una *funcion especial que puede pausar y reanudar su ejecución*, permitiendo que otras tareas se ejecuten durante esas pausas
+* Logging
+** Logger
+Se puede pensar en el *Logger* como un *reportero* en el codigo que decide
+que *registrar*, en que nivel y donde almacenar o enviar esos registros
+** Root logger
+*** Log level
+Por defecto hay *5 niveles* que indican la severidad de un evento.
+| log level | función            |
+|-----------+--------------------|
+| DEBUG     | logging.debug()    |
+|-----------+--------------------|
+| INFO      | logging.info()     |
+|-----------+--------------------|
+| WARNING   | logging.warning()  |
+|-----------+--------------------|
+| ERROR     | logging.error()    |
+|-----------+--------------------|
+| CRITICAL  | logging.critical() |
+
+cuando se usa el modulo de la *biblioteca estandar de Python* sin previa configuración
+los niveles de *DEBUG* y *INFO* no registran sus mensajes. Esto se puede configurar
+permitiendo que el modulo *logging* registre los eventos de todos los niveles
+*** ¿ Cuando usar debug o info?
+** Configuracion basica para usar /logging/
+#+begin_src python
+   logging.basicConfig(
+      format="%(asctime)s - %(levelname)s - %(message)s",
+      style="%",
+      datefmt="%Y-%m-%d %H:%M",
+      level=logging.DEBUG,
+   )
+#+end_src
+
+Esta configuración determina configuracion global *(para toda la aplicación)*,
+a partir de esta configuración se pueden crear /loggers/ para cada modulo usando ~__name__~
+#+begin_src python
+  logger = logging.getLogger(__name__)
+  logger.setLevel(logging.DEBUG)
+#+end_src

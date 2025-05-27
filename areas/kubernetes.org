@@ -1,2 +1,32 @@
 #+title: Kubernetes
-* 
+* Namespaces
+Es un mecanimo que permite *aislar un grupo de recursos* dentro de un unico cluster. Basicamente es como *crear sub-clusteres virtuales*
+dentro de un cluster fisico mas grande
+* Pod
+Es *uno o mas contenedores*
+* Manifiesto
+ un *manifiesto es un archivo de configuración YAML describe los recursos de Kubernetes* que deseas crear, su estado deseado
+ y sus características.
+** Tipos
+*** Pod
+*** Deployment
+*** Service
+* Comandos
+** Listar todos los namespaces creados en el cluster
+#+begin_src bash
+  kubectl get ns
+#+end_src
+** Listar los pods de un namespace
+  #+begin_src bash
+    kubectl get pods -n <namespace>
+  #+end_src
+
+  #+begin_src bash
+    kubectl -n <namespace> get pods
+  #+end_src
+** Listar los pods de un namespace con mas informacion
+  #+begin_src bash
+    kubectl -n <namespace> get pods -o wide
+#+end_src
+** Crear un pod en un namespace
+

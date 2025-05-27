@@ -1,0 +1,51 @@
+#+title: Linux
+* Void linux
+** Configuracion del teclado 
+*** Configuracion de teclado para entornos graficos
+Para configurar el teclado en un entorno grafico como *X11/wayland* se utiliza *X Keyboard Extension* es una funcionalidad del sistema de ventanas que permite la
+gestion avanzada de la configuración del teclado
+**** ¿ Para que sirve la carpeta ~xorg.conf.d~ ?
+Esta carpeta *almacena archivos de configuracion del comportamiento de Xorg*, como dispositivos de entrada, tarjetas graficas, monitores o ajustes de rendimiento
+**** Archivos de configuracion para el teclado
+#+begin_src bash :name 00-keyboard.conf
+  Section "InputClass"
+	Identifier "system-keyboard"
+	MatchIsKeyboard "on"
+	Option "XkbLayout" "latam"
+  EndSection
+#+end_src
+*** Configuracion de teclado para la consola
+** Configuracion de php
+Algunos modulos conocidos de php en *void-linux* no se encuentran es su gestor de paquetes
+uno me llamo la atencion que era el modulo *phar* ya que este no se encontraba en *xbps* pero
+al agregarle la extension al archivo de configuracion de php /(php.ini)/ ubicado en //etc/php.8.3/php.ini/
+lo reconocio y no me salto ningun problema
+#+begin_quote
+Phar es un modulo que ya esta presente en la instalación de php, solo se tiene que habilitar en la configuración
+#+end_quote
+* PATH
+Es una variable de entorno en este se define una lista de directorios /separados por :/ donde el
+*interprete de comandos (shell)* busca los archivos ejecutables
+* TODO Posix
+* Configuración de docker
+** Problema
+Cuando uso docker precedido de ~sudo~ me lista las imagenes y puedo usarlo, mientras que cuando no lo uso
+me salta un error
+* Grupos
+** Definicion
+Es una *coleccion* de usuario que comparten permisos sobre un archivo o directorios
+** Grupo primario
+Cada usuario en Linux pertenece a un grupo primario. Cuando un usuario crea un archivo,
+este archivo pertenece automáticamente a su grupo primario. Esta información se almacena en el archivo /etc/passwd
+** Grupo secundario
+Un usuario puede ser miembro de uno o más grupos secundarios además de su grupo primario. Esto permite a los usuarios
+acceder a recursos que son propiedad de otros grupos. La información de los grupos secundarios se almacena en el archivo ~/etc/group~.
+** Adicion de un usuario a un grupo
+Para agregar un usuario a un o muchos grupos secundarios podriamos usar el siguiente comando
+#+begin_src bash
+  sudo usermod -aG <group1>,<group2> user
+#+end_src
+** Ver a que grupo pertenece un usuario especifico
+
+* Comandos utilizados
+- 
